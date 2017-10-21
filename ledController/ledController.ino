@@ -70,8 +70,11 @@ void loop() {
             // the content of the HTTP response follows the header:
             //client.print("Click <a href=\"/H\">here</a> turn the LED on pin 9 on<br>");
             //client.print("Click <a href=\"/L\">here</a> turn the LED on pin 9 off<br>");
-            client.print("<form> <button formaction=\"/H\">ON</button></form>");
-            client.print("<form> <button formaction=\"/L\">OFF</button></form>");
+
+            client.print("<style> body {background-color: #cccccc;}</style>");
+            client.print("<h1 align = \"center\" style = \"color:blue;font-weight:normal;\">Welcome to WebBot</h1>");
+            client.print("<form align = \"center\"> <button formaction=\"/H\" style=\"background-color: #4CAF50\";>ON</button></form>");
+            client.print("<form align = \"center\"> <button formaction=\"/L\" style=\"background-color: #4CAF50\";>OFF</button></form>");
  
             // The HTTP response ends with another blank line:
             client.println();
